@@ -1,0 +1,44 @@
+.bg-login{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bg-login-card{
+    width: 100%;
+    max-width: 24rem;
+}
+
+.bg-login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group{
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-label-row{
+    display: flex;
+    align-items: center;
+}
+
+.forgot-password{
+    margin-left: auto;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
