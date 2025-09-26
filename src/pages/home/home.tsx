@@ -1,4 +1,6 @@
-import CardsPassword from "@/components/cards-pass";
+import CardsCount from "@/components/cards-count";
+import AppPagination from "@/components/pagination";
+import { SearchBar } from "@/components/search";
 import { 
     GlobeLock,
     MonitorSmartphone,
@@ -15,11 +17,16 @@ const senhas = [
 
 export default function HomePage(){
     return(
-        <>
-            <h1>Pagina de home</h1>
-            <div className="grid grid-cols-4 gap-4 p-4">
-                <CardsPassword senhas={senhas} />
+        <div className="flex justify-center ">
+            <div className="w-3/4">
+                <div className="flex justify-end pt-5">
+                    <SearchBar />
+                </div>
+                <div className="grid grid-cols-3 gap-10 pb-4 pt-20">
+                    <CardsCount senhas={senhas} />
+                </div>
+                <AppPagination />
             </div>
-        </>
+        </div>
     )
 }

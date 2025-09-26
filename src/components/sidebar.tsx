@@ -4,7 +4,7 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -19,7 +19,7 @@ const items = [
   },
   {
     title: "Adicionar",
-    url: "#",
+    url: "/form",
     icon: FilePlus,
   },
 ]
@@ -27,9 +27,11 @@ const items = [
 export default function AppSidebar() {
   return (
     <Sidebar>
+      <SidebarHeader>
+        <h1>Usuário</h1>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
