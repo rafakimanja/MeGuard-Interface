@@ -1,16 +1,6 @@
 import { Home, FilePlus } from "lucide-react"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar"
+import { Link } from "react-router"
 
-// Menu items.
 const items = [
   {
     title: "Home",
@@ -26,28 +16,15 @@ const items = [
 
 export default function AppSidebar() {
   return (
-    <Sidebar>
-      <SidebarHeader>
-        <h1>Usuário</h1>
-      </SidebarHeader>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
+    <aside>
+      {
+        items.map((item) => (
+          <Link to={item.url}>
+            <item.icon />
+            {item.title}
+          </Link>
+        ))
+      }
+    </aside>
   )
 }

@@ -12,7 +12,7 @@ const categorias = [
   { value: "github", label: "GitHub", icon: Github },
 ];
 
-export function CountPage() {
+export default function AcountPage() {
   const conta = {
     titulo: "Login PC",
     usuario: "tuilara-lavarda",

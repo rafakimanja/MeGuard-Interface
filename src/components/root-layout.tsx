@@ -1,10 +1,8 @@
 import { Outlet } from "react-router";
 import AppSidebar from "./sidebar";
-import { SidebarProvider } from "./ui/sidebar";
 
 export default function RootLayout() {
   return (
-    <SidebarProvider>
       <div className="flex h-screen w-screen">
         {/* Sidebar fixa à esquerda */}
         <AppSidebar />
@@ -14,6 +12,5 @@ export default function RootLayout() {
           <Outlet />
         </main>
       </div>
-    </SidebarProvider>
   );
 }
